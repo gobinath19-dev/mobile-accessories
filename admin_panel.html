@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="icon" href="img/icon.png" type="image/x-icon">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #215e0e73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    height: 100px;
+    width: 300px;
+    margin: 10px;
+    font-size: 44px; /* Adjusted font-size */
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button:hover {
+    background-color: #ff5858;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 66px;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>ADMIN</h1>
+  <a href="users_admin.php"><button class="button">Users</button></a>
+  <a href="order_admin.php"><button class="button">Ordered</button></a>
+  <a href="contact_admin.php"><button class="button">Contact</button></a>
+</div>
+
+</body>
+</html>

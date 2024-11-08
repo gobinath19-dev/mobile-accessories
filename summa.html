@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #555;
+  }
+  .item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  #cart {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    list-style: none;
+  }
+  #cart li {
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #total {
+    margin-top: 20px;
+    text-align: right;
+  }
+  #total strong {
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Shopping Cart</h1>
+
+  <div id="items">
+    <div class="item">
+      <h2>Product 1</h2>
+      <p>$10</p>
+      <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <h2>Product 2</h2>
+      <p>$15</p>xxxx
+      <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+    </div>
+  </div>
+
+  <h2>Cart</h2>
+  <ul id="cart">
+    <!-- Cart items will be displayed here -->
+  </ul>
+  
+  <div id="total">
+    <strong>Total: $<span id="totalAmount">0</span></strong>
+  </div>
+</div>
+
+<script>
+let cart = [];
+let totalAmount = 0;
+
+function addToCart(name, price) {
+  cart.push({ name, price });
+  totalAmount += price;
+  displayCart();
+}
+
+function removeFromCart(index, price) {
+  cart.splice(index, 1);
+  totalAmount -= price;
+  displayCart();
+}
+
+function displayCart() {
+  const cartElement = document.getElementById("cart");
+  cartElement.innerHTML = "";
+  cart.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${item.name} - $${item.price}`;
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.onclick = () => removeFromCart(index, item.price);
+    li.appendChild(removeBtn);
+    cartElement.appendChild(li);
+  });
+  
+  const totalElement = document.getElementById("totalAmount");
+  totalElement.textContent = totalAmount.toFixed(2); // Display total with 2 decimal places
+}
+</script>
+
+</body>
+</html>

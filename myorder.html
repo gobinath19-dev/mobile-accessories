@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Order</title>
+    <style>
+.delete-item {
+    background-color: #ff0101; /* Red delete button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-item:hover {
+    background-color: #aa250e; /* Darker red on hover */
+}
+    </style>
+    <link rel="stylesheet" href="myorder.css">
+</head>
+<body>
+    <h1>My Order</h1>
+    <div id="order-container">
+        <!-- Product name and price headings -->
+        <div class="product-heading">
+            <h2>Product Name</h2>
+            <h2 class="price">Price</h2>
+        </div>
+        <!-- Order items -->
+        <div id="order-items"></div>
+        <!-- Total amount -->
+        <p id="total"><span></span></p>
+        <!-- Purchase button -->
+        <a href="index.html" style="text-decoration: none;"><button id="purchase-btn" >HOME</button></a>
+    </div>
+
+    <script src="myorder.js">
+        // JavaScript code for order functionality (same as before)
+    </script>
+</body>
+</html>

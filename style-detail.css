@@ -1,0 +1,111 @@
+body {
+    /* background-image: url("img/gallery/g2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    
+    font-family: Arial, sans-serif;
+    /* background-color: #0080ff; */
+    margin: 0;
+    padding: 0;
+}
+.gradient-background {
+    background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #08080870;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+.btn {
+    font-size: 0.8cm;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #d32f2f;
+}
+
+/* headding
+ */
+
+ .h11{
+/* background-color: #3498db; Change the header background color */
+background-color: black;
+color: #fff;
+font-size: 20px;
+    
+text-align: center;
+justify-content: center;
+padding: 5px;
+height: 60px;
+}
+
+
+.h11 h1{
+position: relative;
+bottom: 20px;
+
+}
+
+

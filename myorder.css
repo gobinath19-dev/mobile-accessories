@@ -1,0 +1,91 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffb6c1; /* Light pink background */
+}
+
+h1 {
+  text-align: center;
+  color: #fff; /* White header text */
+  margin-bottom: 20px;
+  background-color: #ff69b4; /* Pink header background */
+  padding: 15px 0; /* Add some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#order-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff8dc; /* Light yellow container background */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.product-heading {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ff69b4; /* Pink border */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.product-heading h2 {
+  font-size: 20px;
+  color: #333;
+}
+.price{
+  padding-right: 500px;
+}
+
+
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px;
+}
+
+.order-item button {
+  background-color: #ff4500; /* Red delete button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.order-item button:hover {
+  background-color: #ff6347; /* Darker red on hover */
+}
+
+#total {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+  color: #333;
+}
+
+#total span {
+  color: #00000000; /* Total amount color */
+}
+
+#purchase-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #4caf50; /* Green button */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+#purchase-btn:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
